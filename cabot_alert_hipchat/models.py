@@ -51,12 +51,12 @@ class HipchatAlert(AlertPlugin):
         room = env.get('HIPCHAT_ALERT_ROOM')
         api_key = env.get('HIPCHAT_API_KEY')
         url = env.get('HIPCHAT_URL')
+        url = url.replace('{room_id_or_name}', room)
 
         resp = requests.post(url + '?auth_token=' + api_key, data={
-            'room_id': room,
             'from': sender[:15],
             'message': message,
-            'notify': 1,
+            'notify': True,
             'color': color,
             'message_format': 'text',
         })

@@ -1,6 +1,9 @@
 Cabot Hipchat Plugin
 =====
 
+Supports v2 only.
+
+
 This is an alert plugin for the cabot service monitoring tool. It allows you to alert users by their user handle in a hipchat room.
 
 ## Installation
